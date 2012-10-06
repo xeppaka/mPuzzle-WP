@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="mPuzzle.HelpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Height="768" Width="480">
+        <Grid.Background>
+            <ImageBrush ImageSource="images/general_background.png" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="81"/>
+            <RowDefinition Height="9"/>
+            <RowDefinition Height="543*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="2">
+            <Line Height="12"/>
+            <TextBlock Foreground="{StaticResource ListText}"
+                       Text="Game description:" TextAlignment="Center" FontSize="28"
+                       FontWeight="Bold"/>
+            <Line Height="10"/>
+            <TextBlock Foreground="{StaticResource ListText}" Padding="6">
+            1. Collect the image switching places of pieces into<LineBreak/>which it is divided. With every image collected, new<LineBreak/>one will appear following the list. There are 4 levels<LineBreak/>of difficulty: easy, medium, hard and expert, differing<LineBreak/>quantity of elements the image is divided.<LineBreak/>The quantity of movement of elements and time are<LineBreak/>counted during the game. You can improve your<LineBreak/>result by collecting the image once again.
+            </TextBlock>
+            <TextBlock Foreground="{StaticResource ListText}" Padding="6">
+            2. To switch two pieces touch one of them and then<LineBreak/>touch the second.
+            </TextBlock>
+            <TextBlock Foreground="{StaticResource ListText}" Padding="6">
+            3. To switch a block of the pieces touch one piece,<LineBreak/>then keeping a finger on the screen move to allocate<LineBreak/>the block of pieces. When the block is allocated,<LineBreak/>release your finger and touch the allocated block<LineBreak/>again. Keeping a finger on the screen move allocated<LineBreak/>block to the new position. When the block of<LineBreak/>elements is in the desirable position release a finger.
+            </TextBlock>
+        </StackPanel>
+        <Image x:Name="header" Source="images/help_header.png" Grid.Row="0"
+               Grid.RowSpan="2" Stretch="Fill"/>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

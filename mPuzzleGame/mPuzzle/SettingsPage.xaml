@@ -1,0 +1,98 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="mPuzzle.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <Style x:Key="ChangeUsernameButtonStyle" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="images/settings_changeusername_button.png" Stretch="Fill" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Disabled" />
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="ButtonBackground">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <ImageBrush ImageSource="images/settings_changeusername_button_pressed.png" Stretch="Fill"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="ButtonBackground" BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Background="{TemplateBinding Background}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Canvas x:Name="LayoutRoot" Height="Auto" xmlns:localControls="clr-namespace:mPuzzle">
+        <Grid Height="768" Width="480">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/general_background.png" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="81"/>
+                <RowDefinition Height="9"/>
+                <RowDefinition Height="543*"/>
+                <RowDefinition Height="105"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="2">
+                <Line Height="12"/>
+                <TextBlock Text="Your nickname:" TextAlignment="Center" 
+                       Foreground="{StaticResource ListText}" FontSize="28"/>
+                <Line Height="20"/>
+                <TextBlock x:Name="username" TextAlignment="Center" 
+                       Foreground="{StaticResource ListText}" FontSize="38" 
+                       FontWeight="Bold"/>
+                <Line Height="30" />
+            </StackPanel>
+            <Button x:Name="buttonChangeUsername" Width="321" Height="102" Grid.Row="3"
+                    Style="{StaticResource ChangeUsernameButtonStyle}" Click="buttonChangeUsername_Click"/>
+            <Image x:Name="header" Source="images/settings_header.png" Grid.Row="0"
+               Grid.RowSpan="2" Stretch="Fill"/>
+        </Grid>
+        <localControls:NicknameDialog x:Name="nicknameDialog" Margin="41,92,37,306" Grid.Row="2" Visibility="Collapsed" Canvas.Top="136" />
+    </Canvas>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

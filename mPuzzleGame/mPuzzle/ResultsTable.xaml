@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="mPuzzle.ResultsTable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="88" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--header-->
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1" />
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock Text=" Easy" Foreground="{StaticResource ListBorderBrush}"/>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="2" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock Text=" Medium" Foreground="{StaticResource ListBorderBrush}"/>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="3" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock Text=" Hard" Foreground="{StaticResource ListBorderBrush}"/>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="4" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock Text=" Expert" Foreground="{StaticResource ListBorderBrush}"/>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock Text=" Time" Foreground="{StaticResource ListBorderBrush}"/>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="0" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock Text=" Moves " Foreground="{StaticResource ListBorderBrush}"/>
+        </Border>
+        <!-- data -->
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resEasyTime" Text="{Binding timeeasy}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resEasyMoves" Text="{Binding moveseasy}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resMediumTime" Text="{Binding timemedium}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="2" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resMediumMoves" Text="{Binding movesmedium}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="3" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resHardTime"  Text="{Binding timehard}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="3" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resHardMoves" Text="{Binding moveshard}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="4" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resExpertTime" Text="{Binding timeexpert}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="4" BorderBrush="{StaticResource ListBorderResultsTable}"
+                BorderThickness="1">
+            <TextBlock x:Name="resExpertMoves" Text="{Binding movesexpert}" Foreground="{StaticResource ListBorderBrush}"
+                       Margin="2"/>
+        </Border>
+    </Grid>
+</UserControl>

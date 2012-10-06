@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EA853EA-60B4-412E-A4DB-88D14669B3C1}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mPuzzle</RootNamespace>
+    <AssemblyName>mPuzzle</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>mPuzzle.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>mPuzzle.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20901.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseDifficultyPage.xaml.cs">
+      <DependentUpon>ChooseDifficultyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChoosePuzzlePage.xaml.cs">
+      <DependentUpon>ChoosePuzzlePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreUserListPage.xaml.cs">
+      <DependentUpon>ScoreUserListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="SyncErrorDialog.xaml.cs">
+      <DependentUpon>SyncErrorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NicknameDialog.xaml.cs">
+      <DependentUpon>NicknameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RestService.cs" />
+    <Compile Include="PuzzleViewInfo.cs" />
+    <Compile Include="GameLandscapePage.xaml.cs">
+      <DependentUpon>GameLandscapePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameParams.cs" />
+    <Compile Include="GameThread.cs" />
+    <Compile Include="GamePortraitPage.xaml.cs">
+      <DependentUpon>GamePortraitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameController.cs" />
+    <Compile Include="GameViewController.cs" />
+    <Compile Include="IAnimationCallback.cs" />
+    <Compile Include="IPuzzleGamePage.cs" />
+    <Compile Include="IPuzzleLoader.cs" />
+    <Compile Include="IUpdateable.cs" />
+    <Compile Include="Puzzle.cs" />
+    <Compile Include="HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuzzleAdapter.cs" />
+    <Compile Include="ResultsTable.xaml.cs">
+      <DependentUpon>ResultsTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScoresPage.xaml.cs">
+      <DependentUpon>ScoresPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ChooseDifficultyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChoosePuzzlePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScoreUserListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SyncErrorDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GameLandscapePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GamePortraitPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NicknameDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultsTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScoresPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\mainmenu_background.png" />
+    <Resource Include="images\mainmenu_button_help.png" />
+    <Resource Include="images\mainmenu_button_help_pressed.png" />
+    <Resource Include="images\mainmenu_button_play.png" />
+    <Resource Include="images\mainmenu_button_play_pressed.png" />
+    <Resource Include="images\mainmenu_button_scores.png" />
+    <Resource Include="images\mainmenu_button_scores_pressed.png" />
+    <Resource Include="images\general_background.png" />
+    <Resource Include="images\mainmenu_button_settings.png" />
+    <Resource Include="images\mainmenu_button_settings_pressed.png" />
+    <Resource Include="images\difficulty_easy_button.png" />
+    <Resource Include="images\difficulty_easy_button_pressed.png" />
+    <Resource Include="images\difficulty_expert_button.png" />
+    <Resource Include="images\difficulty_expert_button_pressed.png" />
+    <Resource Include="images\difficulty_hard_button.png" />
+    <Resource Include="images\difficulty_hard_button_pressed.png" />
+    <Resource Include="images\difficulty_medium_button.png" />
+    <Resource Include="images\difficulty_medium_button_pressed.png" />
+    <Resource Include="images\scores_sync_button.png" />
+    <Resource Include="images\scores_sync_button_pressed.png" />
+    <Resource Include="images\scores_wait_button.png" />
+    <Resource Include="images\settings_changeusername_button.png" />
+    <Resource Include="images\settings_changeusername_button_pressed.png" />
+    <Resource Include="images\choose_difficulty_header.png" />
+    <Resource Include="images\choose_puzzle_header.png" />
+    <Resource Include="images\scores_header.png" />
+    <Resource Include="images\userlist_header.png" />
+    <Resource Include="images\settings_header.png" />
+    <Resource Include="images\button_pause.png" />
+    <Resource Include="images\button_pause_pressed.png" />
+    <Resource Include="images\help_header.png" />
+    <Resource Include="puzzles\artistworld1.jpg" />
+    <Resource Include="puzzles\artistworld1_thumbnail.jpg" />
+    <Resource Include="puzzles\artistworld1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\autumn1.jpg" />
+    <Resource Include="puzzles\autumn1_thumbnail.jpg" />
+    <Resource Include="puzzles\autumn1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\autumn2.jpg" />
+    <Resource Include="puzzles\autumn2_thumbnail.jpg" />
+    <Resource Include="puzzles\autumn2_thumbnailbw.jpg" />
+    <Resource Include="puzzles\balls1.jpg" />
+    <Resource Include="puzzles\balls1_thumbnail.jpg" />
+    <Resource Include="puzzles\balls1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\beach1.jpg" />
+    <Resource Include="puzzles\beach1_thumbnail.jpg" />
+    <Resource Include="puzzles\beach1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\beer1.jpg" />
+    <Resource Include="puzzles\beer1_thumbnail.jpg" />
+    <Resource Include="puzzles\beer1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\bigcity1.jpg" />
+    <Resource Include="puzzles\bigcity1_thumbnail.jpg" />
+    <Resource Include="puzzles\bigcity1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\boat1.jpg" />
+    <Resource Include="puzzles\boat1_thumbnail.jpg" />
+    <Resource Include="puzzles\boat1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\building1.jpg" />
+    <Resource Include="puzzles\building1_thumbnail.jpg" />
+    <Resource Include="puzzles\building1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\butterfly1.jpg" />
+    <Resource Include="puzzles\butterfly1_thumbnail.jpg" />
+    <Resource Include="puzzles\butterfly1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\children1.jpg" />
+    <Resource Include="puzzles\children1_thumbnail.jpg" />
+    <Resource Include="puzzles\children1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\chillis1.jpg" />
+    <Resource Include="puzzles\chillis1_thumbnail.jpg" />
+    <Resource Include="puzzles\chillis1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\earth1.jpg" />
+    <Resource Include="puzzles\earth1_thumbnail.jpg" />
+    <Resource Include="puzzles\earth1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\firework1.jpg" />
+    <Resource Include="puzzles\firework1_thumbnail.jpg" />
+    <Resource Include="puzzles\firework1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\fish1.jpg" />
+    <Resource Include="puzzles\fish1_thumbnail.jpg" />
+    <Resource Include="puzzles\fish1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\flamingo1.jpg" />
+    <Resource Include="puzzles\flamingo1_thumbnail.jpg" />
+    <Resource Include="puzzles\flamingo1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\flow1.jpg" />
+    <Resource Include="puzzles\flow1_thumbnail.jpg" />
+    <Resource Include="puzzles\flow1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\hdd1.jpg" />
+    <Resource Include="puzzles\hdd1_thumbnail.jpg" />
+    <Resource Include="puzzles\hdd1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\horse1.jpg" />
+    <Resource Include="puzzles\horse1_thumbnail.jpg" />
+    <Resource Include="puzzles\horse1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\industry1.jpg" />
+    <Resource Include="puzzles\industry1_thumbnail.jpg" />
+    <Resource Include="puzzles\industry1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\leaf1.jpg" />
+    <Resource Include="puzzles\leaf1_thumbnail.jpg" />
+    <Resource Include="puzzles\leaf1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\leopard1.jpg" />
+    <Resource Include="puzzles\leopard1_thumbnail.jpg" />
+    <Resource Include="puzzles\leopard1_thumbnailbw.jpg" />
+    <Content Include="puzzles\list.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Resource Include="puzzles\peafowl.jpg" />
+    <Resource Include="puzzles\peafowl_thumbnail.jpg" />
+    <Resource Include="puzzles\peafowl_thumbnailbw.jpg" />
+    <Resource Include="puzzles\mall1.jpg" />
+    <Resource Include="puzzles\mall1_thumbnail.jpg" />
+    <Resource Include="puzzles\mall1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\nails1.jpg" />
+    <Resource Include="puzzles\nails1_thumbnail.jpg" />
+    <Resource Include="puzzles\nails1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\nightlife1.jpg" />
+    <Resource Include="puzzles\nightlife1_thumbnail.jpg" />
+    <Resource Include="puzzles\nightlife1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\NY1.jpg" />
+    <Resource Include="puzzles\NY1_thumbnail.jpg" />
+    <Resource Include="puzzles\NY1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\oldbooks1.jpg" />
+    <Resource Include="puzzles\oldbooks1_thumbnail.jpg" />
+    <Resource Include="puzzles\oldbooks1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\parrot1.jpg" />
+    <Resource Include="puzzles\parrot1_thumbnail.jpg" />
+    <Resource Include="puzzles\parrot1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\pathtoheaven1.jpg" />
+    <Resource Include="puzzles\pathtoheaven1_thumbnail.jpg" />
+    <Resource Include="puzzles\pathtoheaven1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\pencils1.jpg" />
+    <Resource Include="puzzles\pencils1_thumbnail.jpg" />
+    <Resource Include="puzzles\pencils1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\pills1.jpg" />
+    <Resource Include="puzzles\pills1_thumbnail.jpg" />
+    <Resource Include="puzzles\pills1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\romania1.jpg" />
+    <Resource Include="puzzles\romania1_thumbnail.jpg" />
+    <Resource Include="puzzles\romania1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\roots1.jpg" />
+    <Resource Include="puzzles\roots1_thumbnail.jpg" />
+    <Resource Include="puzzles\roots1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\rosepetals1.jpg" />
+    <Resource Include="puzzles\rosepetals1_thumbnail.jpg" />
+    <Resource Include="puzzles\rosepetals1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\seashell1.jpg" />
+    <Resource Include="puzzles\seashell1_thumbnail.jpg" />
+    <Resource Include="puzzles\seashell1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\serenity1.jpg" />
+    <Resource Include="puzzles\serenity1_thumbnail.jpg" />
+    <Resource Include="puzzles\serenity1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\snake1.jpg" />
+    <Resource Include="puzzles\snake1_thumbnail.jpg" />
+    <Resource Include="puzzles\snake1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\square1.jpg" />
+    <Resource Include="puzzles\square1_thumbnail.jpg" />
+    <Resource Include="puzzles\square1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\stairs1.jpg" />
+    <Resource Include="puzzles\stairs1_thumbnail.jpg" />
+    <Resource Include="puzzles\stairs1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\stamps1.jpg" />
+    <Resource Include="puzzles\stamps1_thumbnail.jpg" />
+    <Resource Include="puzzles\stamps1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\starfish1.jpg" />
+    <Resource Include="puzzles\starfish1_thumbnail.jpg" />
+    <Resource Include="puzzles\starfish1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\sticksstock1.jpg" />
+    <Resource Include="puzzles\sticksstock1_thumbnail.jpg" />
+    <Resource Include="puzzles\sticksstock1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\stones1.jpg" />
+    <Resource Include="puzzles\stones1_thumbnail.jpg" />
+    <Resource Include="puzzles\stones1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\sunflower1.jpg" />
+    <Resource Include="puzzles\sunflower1_thumbnail.jpg" />
+    <Resource Include="puzzles\sunflower1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\vegetables1.jpg" />
+    <Resource Include="puzzles\vegetables1_thumbnail.jpg" />
+    <Resource Include="puzzles\vegetables1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\waterfall1.jpg" />
+    <Resource Include="puzzles\wheels1.jpg" />
+    <Resource Include="puzzles\winter1.jpg" />
+    <Resource Include="puzzles\zebra1.jpg" />
+    <Resource Include="puzzles\waterfall1_thumbnail.jpg" />
+    <Resource Include="puzzles\waterfall1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\wheels1_thumbnail.jpg" />
+    <Resource Include="puzzles\wheels1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\winter1_thumbnail.jpg" />
+    <Resource Include="puzzles\winter1_thumbnailbw.jpg" />
+    <Resource Include="puzzles\zebra1_thumbnail.jpg" />
+    <Resource Include="puzzles\zebra1_thumbnailbw.jpg" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

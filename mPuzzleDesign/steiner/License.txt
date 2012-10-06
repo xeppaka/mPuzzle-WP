@@ -1,0 +1,27 @@
+GABRIELE MAGURNO'S FONTS - [ www.magurno.com ]
+---------------------------------------------------------
+
+END-USER LICENSE AGREEMENT:
+
+IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and Gabriele Magurno ("Gabriele Magurno") for the software identified above, which includes computer software and may include associated media, printed materials, and "online" or electronic documentation (collectively, "SOFTWARE"). By installing, copying, or otherwise using the SOFTWARE, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install, copy or otherwise use the SOFTWARE.
+
+INTRODUCTION:  	The SOFTWARE includes a software program. Components you receive as part of the SOFTWARE may include a separate end user license agreement (each a "Component EULA").  In the event of inconsistencies between this EULA and a Component EULA, the terms of the Component EULA shall control.
+
+SOFTWARE LICENSE
+The SOFTWARE is completely FREEWARE (no payments are required). The SOFTWARE is licensed, not sold. The original concept and design of copyrighted material is owned by Gabriele Magurno.
+
+1.Reserved Rights. title and ownership are property of respective authors.
+
+2.Pre-Release Code, Non-Commercial Use. The SOFTWARE contains PRERELEASE CODE that is not at the level of performance and compatibility of a final, generally available, product offering. The SOFTWARE may not operate correctly and may be substantially modified prior to first commercial shipment, if any. Gabriele Magurno is not obligated to make this or any later version of the SOFTWARE commercially available. The SOFTWARE is "Not for Commercial Use". You may not use the SOFTWARE in a live operating environment where it may be relied upon to perform in the same manner as a commercially released product or with data that has not been sufficiently backed up.
+
+* No Transfer. You may not rent, sell or sublicense, the SOFTWARE or any of the rights granted to you under this EULA to any third parties.
+
+* Support Services. Gabriele Magurno is not obligated to provide technical or other support ("Support Services") for the SOFTWARE.
+
+3.INTELLECTUAL PROPERTY RIGHTS. All title and intellectual property rights in and to the SOFTWARE  (including but not limited to any images, photographs, animations, video, audio, music, text and "applets" incorporated into the SOFTWARE), and any copies you are permitted to make herein are owned by its respective owners.  All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties.
+
+DISCLAIMER OF WARRANTIES.  To the maximum extent permitted by applicable law, Gabriele Magurno provide the SOFTWARE AS IS AND WITH ALL FAULTS, and hereby disclaim all warranties and conditions, either express, implied or statutory, including, but not limited to, any (if any) implied warranties or conditions of merchantability, of fitness for a particular purpose, of lack of viruses, of accuracy or completeness of responses, of results, and of lack of negligence or lack of workmanlike effort, all with regard to the SOFTWARE, and the provision of or failure to provide Support Services.  ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT, WITH REGARD TO THE SOFTWARE.  THE ENTIRE RISK AS TO THE QUALITY OF OR ARISING OUT OF USE OR PERFORMANCE OF THE SOFTWARE AND SUPPORT SERVICES, IF ANY, REMAINS WITH YOU.
+
+EXCLUSION OF INCIDENTAL, CONSEQUENTIAL AND CERTAIN OTHER DAMAGES.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL Gabriele Magurno BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS OR CONFIDENTIAL OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY, FOR FAILURE TO MEET ANY DUTY INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, FOR NEGLIGENCE, AND FOR ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE, THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT SERVICES, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS EULA, EVEN IN THE EVENT OF THE FAULT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, BREACH OF CONTRACT OR BREACH OF WARRANTY OF Gabriele Magurno, AND EVEN IF Gabriele Magurno OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+LIMITATION OF LIABILITY AND REMEDIES. Notwithstanding any damages that you might incur for any reason whatsoever (including, without limitation, all damages referenced above and all direct or general damages), the entire liability of Gabriele Magurno  under any provision of this EULA and your exclusive remedy for all of the foregoing shall be limited to U.S.$0.00.

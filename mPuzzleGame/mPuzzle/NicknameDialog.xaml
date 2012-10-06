@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="mPuzzle.NicknameDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}" Height="235" Width="403">
+
+    <StackPanel Width="403" x:Name="nameInput" Visibility="Visible" Height="235">
+        <StackPanel.Background>
+            <SolidColorBrush Color="Black" Opacity="0.55" />
+        </StackPanel.Background>
+        <TextBlock Text="Please choose some nickname:" Margin="11 0" />
+        <TextBlock FontSize="12" Margin="11 0">
+            from 3 to 25 letters<LineBreak/>@#$%^&amp;\\&lt;&gt; symbols are not allowed</TextBlock>
+        <TextBox x:Name="username"/>
+        <Grid Height="32">
+            <TextBlock x:Name="statusText" Margin="11 0"
+                       Visibility="Collapsed" Foreground="Red">
+                <TextBlock.Resources>
+                    <Storyboard x:Name="statusTextAnimation">
+                        <DoubleAnimation
+                            Storyboard.TargetName="statusText"
+                            Storyboard.TargetProperty="Opacity"
+                            From="1.0" To="0.0" Duration="0:0:0.3"
+                            AutoReverse="True" />
+                        </Storyboard>
+                </TextBlock.Resources>
+            </TextBlock>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="buttonOk" Grid.Column="0" Content="Ok" />
+            <Button x:Name="buttonCancel" Grid.Column="1" Content="Cancel" />
+        </Grid>
+    </StackPanel>
+</UserControl>
