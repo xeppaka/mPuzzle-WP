@@ -1,0 +1,2 @@
+serviceClass: com.xeppaka.mpuzzle.client.GreetingService
+path: 3018F005C4CECA6293DD207CA7710512.gwt.rpc
